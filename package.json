@@ -3,9 +3,10 @@
   "name": "fake-midasbuy-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "engines": {"node": "^16.15.1"},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "xabb0s & devchibeko",
