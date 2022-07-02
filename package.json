@@ -3,12 +3,12 @@
   "name": "fake-midasbuy-server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
     "node": "^16.15.1"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "xabb0s & devchibeko",
