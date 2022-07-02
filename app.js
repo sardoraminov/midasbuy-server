@@ -1,5 +1,6 @@
 const express = require("express")
 const cors = require("cors")
+require('dotenv').config()
 
 const usersRouter = require("./routes/user.routes.js")
 
@@ -16,6 +17,6 @@ app.get("/", (req, res) => {
   res.send("Hello")
 })
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
   console.log('server is running on 8080 port');
 })
