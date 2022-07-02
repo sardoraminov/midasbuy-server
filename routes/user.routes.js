@@ -1,20 +1,26 @@
-const { Router } = require("express")
-const { allUsers, createUser } = require("../services/user.service.js")
+const { Router } = require("express");
+const { allUsers, createUser } = require("../services/user.service.js");
 
-const router = Router()
+const router = Router();
 
 //midasbuy-fuck.herokuapp.com/api/user
 https: router.get("/user", (req, res) => {
   allUsers()
     .then((users) => res.send(users))
-    .catch(console.log);
+    .catch(() => {
+      res.send("error");
+      console.log("Error");
+    });
 });
 
 router.post("/register", (req, res) => {
-  const { login, password } = req.body
+  const { login, password } = req.body;
   createUser(login, password)
-    .then(users => res.json(users))
-    .catch(console.log)
-})
+    .then((users) => res.json(users))
+    .catch(() => {
+      res.send("error");
+      console.log("Error");
+    });
+});
 
-module.exports = router
+module.exports = router;
